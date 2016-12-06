@@ -1,26 +1,26 @@
-"C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c"
+"C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c"
 -std=c99
 -ferror-limit=100
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Libraries\CMSIS\Device\ST\STM32F4xx\Include
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Libraries\CMSIS\Device\ST\STM32F4xx\Include
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Libraries\CMSIS\Include
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Libraries\CMSIS\Include
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Libraries\STM32F4xx_StdPeriph_Driver\inc
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Libraries\STM32F4xx_StdPeriph_Driver\inc
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Inc
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc\c
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Libraries\CMSIS\Device\ST\STM32F4xx\Include
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Libraries\CMSIS\Device\ST\STM32F4xx\Include
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Libraries\CMSIS\Include
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Libraries\CMSIS\Include
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Libraries\STM32F4xx_StdPeriph_Driver\inc
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Libraries\STM32F4xx_StdPeriph_Driver\inc
 -I
-C:\Users\Patrick\Desktop\UW_WorkSpace\Lab_Wk8\Inc
+C:\Users\laban\Desktop\UWPCEEmbeddedCourseWork\Lab_Wk8\Inc
 -DUSE_STDPERIPH_DRIVER=1
 -DSTM32F401xx=1
 -D__CHAR_BITS__=8
