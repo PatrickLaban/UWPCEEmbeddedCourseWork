@@ -33,15 +33,16 @@ void main() {
   Hw_init();
   
   /* Enable DMA1, stream 6 (TX) */
- 
-  
+  DMA_Cmd(DMA1_Stream6, ENABLE);
+   
   /* Hold point */
   while(!Button);
   
   /* Enables USART's DMA interface      */
-  
+  USART_DMACmd(COMM, USART_DMAReq_Tx, ENABLE);
   
   /* Call function: wait_for_transfer();    */
+  //wait_for_transfer();
 
   
   while (1) {

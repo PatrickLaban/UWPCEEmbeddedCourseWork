@@ -28,7 +28,7 @@
     <Windows>
       
       
-    <Wnd0>
+    <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-17811-22322</Identity>
@@ -44,7 +44,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-28559-22325</Identity>
@@ -56,20 +56,20 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\hw_init.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>83</YPos2><SelStart2>4053</SelStart2><SelEnd2>4329</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>82</YPos2><SelStart2>4195</SelStart2><SelEnd2>4195</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>21</YPos2><SelStart2>1334</SelStart2><SelEnd2>1334</SelEnd2></Tab><ActiveTab>2</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>686</YPos2><SelStart2>62329</SelStart2><SelEnd2>62329</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>47</YPos2><SelStart2>1977</SelStart2><SelEnd2>1977</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\stm32f4xx_it.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>144</YPos2><SelStart2>4552</SelStart2><SelEnd2>4552</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>267</YPos2><SelStart2>9557</SelStart2><SelEnd2>9557</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\hw_init.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>88</YPos2><SelStart2>4401</SelStart2><SelEnd2>4401</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>82</YPos2><SelStart2>4195</SelStart2><SelEnd2>4195</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>21</YPos2><SelStart2>1209</SelStart2><SelEnd2>1209</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>767</YPos2><SelStart2>62329</SelStart2><SelEnd2>62329</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>116</YPos2><SelStart2>1977</SelStart2><SelEnd2>1977</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\stm32f4xx_it.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>157</YPos2><SelStart2>4991</SelStart2><SelEnd2>4991</SelEnd2></Tab><ActiveTab>5</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>267</YPos2><SelStart2>9557</SelStart2><SelEnd2>9557</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-04663230><key>iaridepm.enu1</key></Toolbar-04663230></Sizes></Row0><Row1><Sizes><Toolbar-14ED8700><key>debuggergui.enu1</key></Toolbar-14ED8700></Sizes></Row1><Row2><Sizes><Toolbar-14ED8958><key>armstlink2.enu1</key></Toolbar-14ED8958></Sizes></Row2></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>752</Bottom><Right>529</Right><x>-2</x><y>-2</y><xscreen>401</xscreen><yscreen>202</yscreen><sizeHorzCX>208854</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>276563</sizeVertCX><sizeVertCY>756269</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>200</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>202</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>208854</sizeVertCX><sizeVertCY>202608</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-05513230><key>iaridepm.enu1</key></Toolbar-05513230></Sizes></Row0></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>752</Bottom><Right>529</Right><x>-2</x><y>-2</y><xscreen>401</xscreen><yscreen>202</yscreen><sizeHorzCX>208854</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>276563</sizeVertCX><sizeVertCY>756269</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>200</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>202</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>202608</sizeHorzCY><sizeVertCX>208854</sizeVertCX><sizeVertCY>202608</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

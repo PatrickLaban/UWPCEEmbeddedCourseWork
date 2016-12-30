@@ -75,3 +75,31 @@ void PrintByte(char c)
   }
 
 }
+
+void PrintStringESP(char *ptr) {
+
+  if (ptr==0 || *ptr==0) return;
+
+  do {
+    if (*ptr=='\n') {
+      PrintByteESP(*ptr++);
+      PrintByteESP('\r');
+    } else {
+      PrintByteESP(*ptr++);
+    }
+  } while (*ptr!=0);
+}
+/**
+  * @brief  Print a character on the HyperTerminal
+  * @param  c: The character to be printed
+  * @retval None
+  */
+void PrintByteESP(char c)
+{
+  
+  USART_SendData(ESP8266, c);
+  /*while (USART_GetFlagStatus(ESP8266, USART_FLAG_TXE) == RESET)
+  {
+  }*/
+
+}

@@ -68,6 +68,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
   // USART is a alternate function on the Nucleo kit
   GPIO_PinAFConfig(GPIO_PORT_USART, GPIO_TX_AF_SOURCE, GPIO_USART_AF);
   GPIO_PinAFConfig(GPIO_PORT_USART, GPIO_RX_AF_SOURCE, GPIO_USART_AF);
+
   
   GPIO_InitStructure.GPIO_Pin = GPIO_PIN_TX;            // USART_TX
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
@@ -77,6 +78,13 @@ GPIO_InitTypeDef GPIO_InitStructure;
   
   GPIO_InitStructure.GPIO_Pin = GPIO_PIN_RX;            // USART_RX
   GPIO_Init(GPIO_PORT_USART, &GPIO_InitStructure);
+  GPIO_PinAFConfig(GPIO_PORT_USART_1, GPIO_TX_AF_SOURCE_1, GPIO_USART_AF_1);
+  GPIO_PinAFConfig(GPIO_PORT_USART_1, GPIO_RX_AF_SOURCE_1, GPIO_USART_AF_1);
+
+  GPIO_InitStructure.GPIO_Pin = GPIO_PIN_TX_1;
+  GPIO_Init(GPIO_PORT_USART_1, &GPIO_InitStructure);
+  GPIO_InitStructure.GPIO_Pin = GPIO_PIN_RX_1;
+  GPIO_Init(GPIO_PORT_USART_1, &GPIO_InitStructure);
   
 
 }
@@ -132,6 +140,7 @@ void hw_uart_init(void) {
 USART_InitTypeDef USART_InitStructure;
    
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+  RCC_APB1PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
  /* USARTx configuration ------------------------------------------------------*/
    /* USARTx configured as follows:
          - BaudRate = 9600 baud  
@@ -151,6 +160,11 @@ USART_InitTypeDef USART_InitStructure;
    USART_Init(COMM, &USART_InitStructure);
    
    USART_Cmd(COMM, ENABLE);
+   
+   USART_InitStructure.USART_BaudRate = BAUD_RATE_1;
+   USART_Init(ESP8266, &USART_InitStructure);
+   
+   USART_Cmd(ESP8266, ENABLE);
 }
 /*******************************************************************************
 Function Name	: hw_nvic_init
@@ -161,7 +175,7 @@ Author          : Dave Allegre  */
 void hw_nvic_init(void) {
     NVIC_InitTypeDef NVIC_InitStructure;
     
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
     
     /* Configure the interrupt */
     NVIC_InitStructure.NVIC_IRQChannel = ADC_IRQn;
@@ -169,6 +183,8 @@ void hw_nvic_init(void) {
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
+      NVIC_SetPriority(SysTick_IRQn, NVIC_EncodePriority(NVIC_PriorityGroup_1, 1,0));
+
     }
   
 

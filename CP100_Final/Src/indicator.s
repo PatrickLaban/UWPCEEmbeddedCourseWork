@@ -26,7 +26,7 @@ PORTA_BSRR      equ     PORTA + BSRR    ;; This is the address for BSRR on PORTA
 LED_ON_MASK     equ     0x00000020      // Turn the LED on
 LED_OFF_MASK    equ     0x00200000      // Turn the LED off
 
-TEMP_THRESHOLD  equ     25              // The threshold to indicate an overtemp
+TEMP_THRESHOLD  equ     13              // The threshold to indicate an overtemp
 
 
   /* Tells the linker the section name : memory type : fragment (align)       */
@@ -53,27 +53,24 @@ Parameters      :
 Return value    : None
 Registers Used  :
               R0: Temperature data from the ADC_IRQHandler
-              R1: 
-              R2: 
-              R3: 
+              R1: Used for holding our tempurature labels and PORTA_BSRR
+              R2: Used for LED_ON_MASK and #1 value to store in TempValid
+              R3: Not used
 *******************************************************************************/
 
 warning_led:
-  STMFD SP!,{R3-R12,LR}         ; Save current context
-  LDR   R1, =PORTA_BSRR   ; Load PORTA_BSRR into R1
-  CMP   R0, #TEMP_THRESHOLD
-  ITT   GE
-  LDRGE R2, =LED_ON_MASK   ; Load LED_ON_MASK to R2
-  STRGE R2, [R1]            ; Store mask (R1) to PORTA_BSRR address loaded into R2
+  STMFD SP!,{R3-R12}            ; Save current context
+  LDR   R1, =PORTA_BSRR         ; Load PORTA_BSRR into R1
+  CMP   R0, #TEMP_THRESHOLD     ; Compare the current temp to our threshold
+  ITT   GE                      ; If the temp is >= threshold turn on the led
+  LDRGE R2, =LED_ON_MASK        ; Load LED_ON_MASK to R2
+  STRGE R2, [R1]                ; Store mask (R2) to PORTA_BSRR address R1
+  LDR   R1, =TempInC            ; Load TempInC into R1
+  STR   R0, [R1]                ; Store Temp data (R0) into TempInC (R1)
+  LDR   R1, =TempValid          ; Load TempValid into R1
+  MOV   R2, #1                  ; Move #1 into R2
+  STR   R2, [R1]                ; Store #1 (R2) into TempValid (R1)
+  LDMFD SP!,{R3-R12}            ; Restore context
+  BX LR                         ; Update PC with LR
 
-  LDR   R1, =TempInC
-  STR   R0, [R1]
-  LDR   R1, =TempValid
-  MOV   R2, #1
-  STR   R2, [R1]
-  LDMFD SP!,{R3-R12,LR}         ; Restore context and update PC with LR
-
-
-
-
- END
+  END

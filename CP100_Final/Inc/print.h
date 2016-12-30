@@ -17,6 +17,8 @@ void PrintHex(uint32_t u32);
 void Print_uint32(uint32_t u);
 void PrintByte(char c);
 void PrintString(char *ptr);
+void PrintByteESP(char c);
+void PrintStringESP(char *ptr);
 
 
 /* Macros ------------------------------------------------------------------- 

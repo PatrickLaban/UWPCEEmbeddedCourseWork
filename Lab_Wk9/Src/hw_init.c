@@ -125,33 +125,48 @@ Parameters	: None
 Return value	: None
 Author          : Dave Allegre  */
 void hw_dma_init(void) {
-DMA_InitTypeDef  DMA_InitStructure;
-
-  DMA_StructInit(&DMA_InitStructure);
-
-  /* Don't forget to enable the clock!! */
-  
-
-  /* Configure the amount of data to transfer   */
-  
-  
-  /* Configure the FIFO mode            */
-  
-
-  /* Configure the memory to transfer from      */
-
-  
-  /* Configure the Peripheral   */
-
-  
-  /* Configure TX DMA */
-
-
-  /* Configure RX DMA */
-
-  
-  //------------------------------------//
-
+    DMA_InitTypeDef  DMA_InitStructure;
+    
+    DMA_StructInit(&DMA_InitStructure);
+    
+    /* Don't forget to enable the clock!! */
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA1, ENABLE);
+    
+    /* Configure the amount of data to transfer   */
+    DMA_InitStructure.DMA_BufferSize = sizeof(text);
+    
+    /* Configure the FIFO mode            */
+    DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Disable;
+    DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_1QuarterFull;
+    DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;
+    
+    /* Configure the memory to transfer from      */
+    DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)&text;
+    DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
+    DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
+    
+    /* Configure the Peripheral   */
+    DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)(&(COMM->DR));
+    DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
+    DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+    DMA_InitStructure.DMA_Priority = DMA_Priority_High;
+    
+    /* Configure TX DMA */
+    DMA_InitStructure.DMA_Channel = DMA_Channel_4;
+    DMA_InitStructure.DMA_DIR = DMA_DIR_MemoryToPeripheral;
+    DMA_Init(DMA1_Stream6, &DMA_InitStructure);
+    
+    /* Configure RX DMA */
+    DMA_InitStructure.DMA_Channel = DMA_Channel_4;
+    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
+    DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)RxBuffer;
+    DMA_Init(DMA1_Stream5, &DMA_InitStructure);
+    
+    //------------------------------------//
+    DMA_ITConfig(DMA1_Stream6, DMA_IT_TC, ENABLE);
+    
   
 }
 /*******************************************************************************
@@ -161,22 +176,20 @@ Description     :
 Parameters      : N/A
 Return value    : N/A					                      */
 void hw_exti_init(void) {
-EXTI_InitTypeDef EXTI_InitStructure;
-  
-  /* Enable SYSCFG clock */
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
-  
-  /* Connect EXTIx Line to PX.xx pin */
-  SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC, EXTI_PinSource13);
-  
-  /* Configure EXTIx line */
-  EXTI_InitStructure.EXTI_Line = EXTI_Line13;
-  EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
-  EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-  EXTI_Init(&EXTI_InitStructure);
-  
+    EXTI_InitTypeDef EXTI_InitStructure;
     
+    /* Enable SYSCFG clock */
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+    
+    /* Connect EXTIx Line to PX.xx pin */
+    SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC, EXTI_PinSource13);
+    
+    /* Configure EXTIx line */
+    EXTI_InitStructure.EXTI_Line = EXTI_Line13;
+    EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    EXTI_Init(&EXTI_InitStructure);
 }
 /*******************************************************************************
 Function Name	: hw_nvic_init
