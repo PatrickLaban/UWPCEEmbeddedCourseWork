@@ -83,7 +83,7 @@ void PrintStringESP(char *ptr) {
   do {
     if (*ptr=='\n') {
       PrintByteESP(*ptr++);
-      PrintByteESP('\r');
+      //PrintByteESP('\r\n');
     } else {
       PrintByteESP(*ptr++);
     }
@@ -98,8 +98,8 @@ void PrintByteESP(char c)
 {
   
   USART_SendData(ESP8266, c);
-  /*while (USART_GetFlagStatus(ESP8266, USART_FLAG_TXE) == RESET)
+  while (USART_GetFlagStatus(ESP8266, USART_FLAG_TXE) == RESET)
   {
-  }*/
+  }
 
 }

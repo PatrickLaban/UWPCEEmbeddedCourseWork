@@ -46,7 +46,7 @@ Author	        : David Allegre
 #define GPIO_PIN_TX_1           GPIO_Pin_9
 #define GPIO_PIN_RX_1           GPIO_Pin_10
 #define GPIO_PORT_USART_1       GPIOA
-#define BAUD_RATE_1             115200
+#define BAUD_RATE_1             9600//115200
 #define ESP8266                 USART1
 
 extern void warning_led(int32_t temp_data);

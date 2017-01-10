@@ -140,7 +140,7 @@ void hw_uart_init(void) {
 USART_InitTypeDef USART_InitStructure;
    
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
-  RCC_APB1PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
  /* USARTx configuration ------------------------------------------------------*/
    /* USARTx configured as follows:
          - BaudRate = 9600 baud  

@@ -49,8 +49,12 @@ void main() {
   while (1) {
     // loop forever
     asm("nop");                 // an example of inline assembler
-    PrintStringESP("AT\n");
+    PrintStringESP("AT\r\n");
     RETAILMSG(1, ("Recieved %c\n", (char)USART_ReceiveData(ESP8266)));
+    /*while (USART_GetFlagStatus(ESP8266, USART_FLAG_RXNE) == RESET)
+  {
+  }*/
+    //USART_ClearFlag(ESP8266, USART_FLAG_RXNE);
     delay(10000000);
 
   }
