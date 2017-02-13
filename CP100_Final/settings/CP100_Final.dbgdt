@@ -19,7 +19,7 @@
           
           
           
-        <Column0>124</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>37</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Disassembly>
         <col-names>
@@ -50,23 +50,19 @@
         <QWatchHistory>
           
           
-        <item>esp_data</item><item>c</item><item>ptr</item><item>TempValid</item><item>TempSensor</item></QWatchHistory>
+        <item>t</item><item>esp_data</item><item>c</item><item>ptr</item><item>TempValid</item><item>TempSensor</item></QWatchHistory>
         <PreferedWindows>
-          <Position>2</Position>
-          <ScreenPosX>0</ScreenPosX>
-          <ScreenPosY>0</ScreenPosY>
-          <Windows>
-            <Window>
-              <Factory>WATCH_1</Factory>
-            </Window>
-          </Windows>
-        </PreferedWindows>
+          
+          
+          
+          
+        <Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>WATCH_1</Factory></Window></Windows></PreferedWindows>
       </QuickWatch>
       <WATCH_1>
         <expressions>
           
           
-        <item>TempSensor</item><item>c</item><item>c</item><item/></expressions>
+        <item>TempSensor</item><item>c</item><item>c</item><item>t</item><item>t</item><item>t</item><item/></expressions>
         <col-names>
           
           
@@ -80,15 +76,11 @@
           
         <item>100</item><item>150</item><item>100</item><item>100</item></col-widths>
         <PreferedWindows>
-          <Position>2</Position>
-          <ScreenPosX>0</ScreenPosX>
-          <ScreenPosY>0</ScreenPosY>
-          <Windows>
-            <Window>
-              <Factory>QuickWatch</Factory>
-            </Window>
-          </Windows>
-        </PreferedWindows>
+          
+          
+          
+          
+        <Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>QuickWatch</Factory></Window></Windows></PreferedWindows>
       </WATCH_1>
       <Register>
         <RegFindHistory/>
@@ -125,7 +117,7 @@
           
           
         <item>180</item><item>300</item><item>100</item><item>120</item><item>180</item></col-widths>
-      </DRIVER_INTERRUPT_LOG>
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></DRIVER_INTERRUPT_LOG>
       <CallStack>
         <col-names>
           <item>Frame</item>
@@ -142,7 +134,7 @@
           <Windows/>
         </PreferedWindows>
       </CallStack>
-    </Static>
+    <PROJECT_GUI_CALL_GRAPH><col-names><item>File</item><item>Function</item><item>Line</item></col-names><col-widths><item>200</item><item>700</item><item>100</item></col-widths><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></PROJECT_GUI_CALL_GRAPH></Static>
     <Windows>
       
       
@@ -219,33 +211,24 @@
               
               
               
-            <REG1>0</REG1><REG2>0</REG2><Group>41</Group><States>24</States><State0>ACTLR</State0><State1>APSR</State1><State2>CFSR</State2><State3>CONTROL</State3><State4>DCRDR</State4><State5>DCRSR</State5><State6>DEMCR</State6><State7>DHCSR</State7><State8>HFSR</State8><State9>NVIC_ICTR</State9><State10>NVIC_ISER0</State10><State11>NVIC_ISER1</State11><State12>NVIC_STIR</State12><State13>SHCSR</State13><State14>SYST_CSR</State14><State15>USART1_BRR</State15><State16>USART1_DR</State16><State17>USART1_SR</State17><State18>USART2_BRR</State18><State19>USART2_CR2</State19><State20>USART2_CR3</State20><State21>USART2_DR</State21><State22>USART2_GTPR</State22><State23>USART2_SR</State23></Session>
+            <REG1>0</REG1><REG2>0</REG2><Group>41</Group><States>27</States><State0>ACTLR</State0><State1>APSR</State1><State2>CFSR</State2><State3>CONTROL</State3><State4>DCRDR</State4><State5>DCRSR</State5><State6>DEMCR</State6><State7>DHCSR</State7><State8>HFSR</State8><State9>NVIC_ICTR</State9><State10>NVIC_ISER0</State10><State11>NVIC_ISER1</State11><State12>NVIC_STIR</State12><State13>SHCSR</State13><State14>SYST_CSR</State14><State15>USART1_BRR</State15><State16>USART1_CR1</State16><State17>USART1_CR2</State17><State18>USART1_CR3</State18><State19>USART1_DR</State19><State20>USART1_SR</State20><State21>USART2_BRR</State21><State22>USART2_CR2</State22><State23>USART2_CR3</State23><State24>USART2_DR</State24><State25>USART2_GTPR</State25><State26>USART2_SR</State26></Session>
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd3><Wnd4>
-        <Tabs>
-          <Tab>
-            <Identity>TabID-11171-23150</Identity>
-            <TabName>Interrupt Log</TabName>
-            <Factory>DRIVER_INTERRUPT_LOG</Factory>
-          </Tab>
-        </Tabs>
-        
-      <SelectedTab>0</SelectedTab></Wnd4><Wnd9><Tabs><Tab><Identity>TabID-8678-16165</Identity><TabName>Watch 1</TabName><Factory>WATCH_1</Factory></Tab><Tab><Identity>TabID-23441-16707</Identity><TabName>Quick Watch</TabName><Factory>QuickWatch</Factory></Tab></Tabs><SelectedTab>1</SelectedTab></Wnd9></Windows>
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\indicator.s</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>21</YPos2><SelStart2>3187</SelStart2><SelEnd2>3207</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Inc\print.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>1143</SelStart2><SelEnd2>1143</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\print.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>61</YPos2><SelStart2>2266</SelStart2><SelEnd2>2337</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>565</YPos2><SelStart2>22516</SelStart2><SelEnd2>22516</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>2085</YPos2><SelStart2>148714</SelStart2><SelEnd2>148714</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>53</YPos2><SelStart2>2531</SelStart2><SelEnd2>2531</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>561</YPos2><SelStart2>23613</SelStart2><SelEnd2>23613</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\hw_init.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>65</YPos2><SelStart2>3215</SelStart2><SelEnd2>3215</SelEnd2></Tab><ActiveTab>7</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>19</YPos2><SelStart2>1663</SelStart2><SelEnd2>1663</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>325</YPos2><SelStart2>13412</SelStart2><SelEnd2>13412</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Inc\nucleoboard.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>15</YPos2><SelStart2>1777</SelStart2><SelEnd2>1777</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\indicator.s</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>21</YPos2><SelStart2>3187</SelStart2><SelEnd2>3207</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Inc\print.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>1127</SelStart2><SelEnd2>1127</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>608</YPos2><SelStart2>30212</SelStart2><SelEnd2>30212</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\hw_init.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>134</YPos2><SelStart2>5085</SelStart2><SelEnd2>5085</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>19</YPos2><SelStart2>1324</SelStart2><SelEnd2>1324</SelEnd2></Tab><ActiveTab>4</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>325</YPos2><SelStart2>13412</SelStart2><SelEnd2>13412</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Inc\nucleoboard.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>8</YPos2><SelStart2>1666</SelStart2><SelEnd2>1666</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\stm32f4xx_it.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>169</YPos2><SelStart2>5745</SelStart2><SelEnd2>5745</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Inc\stm32f4xx_it.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>12</YPos2><SelStart2>2080</SelStart2><SelEnd2>2080</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>1303</YPos2><SelStart2>51516</SelStart2><SelEnd2>51516</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Src\print.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>54</YPos2><SelStart2>2273</SelStart2><SelEnd2>2273</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-05F7F2B0><key>iaridepm.enu1</key></Toolbar-05F7F2B0></Sizes></Row0><Row1><Sizes><Toolbar-0A0F1CD8><key>debuggergui.enu1</key></Toolbar-0A0F1CD8></Sizes></Row1><Row2><Sizes><Toolbar-0A0F1FF8><key>armstlink2.enu1</key></Toolbar-0A0F1FF8></Sizes></Row2></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>508</Bottom><Right>198</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>104167</sizeHorzCX><sizeHorzCY>200602</sizeHorzCY><sizeVertCX>104167</sizeVertCX><sizeVertCY>511535</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>508</Bottom><Right>198</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>104167</sizeHorzCX><sizeHorzCY>200602</sizeHorzCY><sizeVertCX>104167</sizeVertCX><sizeVertCY>511535</sizeVertCY></Rect></Wnd2></Sizes></Row0><Row1><Sizes><Wnd3><Rect><Top>-2</Top><Left>196</Left><Bottom>508</Bottom><Right>537</Right><x>196</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>104167</sizeHorzCX><sizeHorzCY>200602</sizeHorzCY><sizeVertCX>177604</sizeVertCX><sizeVertCY>511535</sizeVertCY></Rect></Wnd3></Sizes></Row1><Row2><Sizes><Wnd9><Rect><Top>-2</Top><Left>535</Left><Bottom>508</Bottom><Right>735</Right><x>535</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>104167</sizeHorzCX><sizeHorzCY>200602</sizeHorzCY><sizeVertCX>104167</sizeVertCX><sizeVertCY>511535</sizeVertCY></Rect></Wnd9></Sizes></Row2></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>200</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>200602</sizeHorzCY><sizeVertCX>104167</sizeVertCX><sizeVertCY>200602</sizeVertCY></Rect></Wnd0></Sizes></Row0><Row1><Sizes><Wnd4><Rect><Top>196</Top><Left>-2</Left><Bottom>396</Bottom><Right>1922</Right><x>-2</x><y>196</y><xscreen>1924</xscreen><yscreen>200</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>200602</sizeHorzCY><sizeVertCX>104167</sizeVertCX><sizeVertCY>200602</sizeVertCY></Rect></Wnd4></Sizes></Row1></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-054BF2B0><key>iaridepm.enu1</key></Toolbar-054BF2B0></Sizes></Row0><Row1><Sizes><Toolbar-0B8AB7A8><key>debuggergui.enu1</key></Toolbar-0B8AB7A8></Sizes></Row1><Row2><Sizes><Toolbar-0B8AA358><key>armstlink2.enu1</key></Toolbar-0B8AA358></Sizes></Row2></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>873</Bottom><Right>111</Right><x>-2</x><y>-2</y><xscreen>50</xscreen><yscreen>196</yscreen><sizeHorzCX>26042</sizeHorzCX><sizeHorzCY>196590</sizeHorzCY><sizeVertCX>58854</sizeVertCX><sizeVertCY>877633</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>873</Bottom><Right>166</Right><x>-2</x><y>-2</y><xscreen>50</xscreen><yscreen>196</yscreen><sizeHorzCX>26042</sizeHorzCX><sizeHorzCY>196590</sizeHorzCY><sizeVertCX>87500</sizeVertCX><sizeVertCY>877633</sizeVertCY></Rect></Wnd2></Sizes></Row0><Row1><Sizes><Wnd3><Rect><Top>-2</Top><Left>164</Left><Bottom>873</Bottom><Right>469</Right><x>164</x><y>-2</y><xscreen>50</xscreen><yscreen>196</yscreen><sizeHorzCX>26042</sizeHorzCX><sizeHorzCY>196590</sizeHorzCY><sizeVertCX>158854</sizeVertCX><sizeVertCY>877633</sizeVertCY></Rect></Wnd3></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>31</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>33</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>33099</sizeHorzCY><sizeVertCX>26042</sizeVertCX><sizeVertCY>196590</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Project>
 

@@ -124,10 +124,10 @@ ADC_CommonInitTypeDef   ADC_CommonInitStructure;
   ADC_TempSensorVrefintCmd(ENABLE);
   
   /* Enable ADC1 interrupt */
-  ADC_ITConfig(ADC1, ADC_IT_EOC, ENABLE);
+ // ADC_ITConfig(ADC1, ADC_IT_EOC, ENABLE);
   
   /* Enable ADC1 **************************************************************/
-  ADC_Cmd(ADC1, ENABLE);
+  //ADC_Cmd(ADC1, ENABLE);
   
 }
 /*******************************************************************************
@@ -165,6 +165,22 @@ USART_InitTypeDef USART_InitStructure;
    USART_Init(ESP8266, &USART_InitStructure);
    
    USART_Cmd(ESP8266, ENABLE);
+   
+   USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+ NVIC_InitTypeDef NVIC_InitStruct;
+
+/**
+ * Set Channel to USART1
+ * Set Channel Cmd to enable. That will enable USART1 channel in NVIC
+ * Set Both priorities to 0. This means high priority
+ *
+ * Initialize NVIC
+ */
+NVIC_InitStruct.NVIC_IRQChannel = USART1_IRQn;
+NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+NVIC_Init(&NVIC_InitStruct);
 }
 /*******************************************************************************
 Function Name	: hw_nvic_init

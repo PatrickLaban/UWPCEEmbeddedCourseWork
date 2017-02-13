@@ -30,7 +30,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "nucleoboard.h"
 #include "stm32f4xx_it.h"
-
+#include "print.h"
+    
 /** @addtogroup STM32F4xx_StdPeriph_Examples
   * @{
   */
@@ -196,6 +197,19 @@ int32_t TempSensor;
   }
 }
 
+void USART1_IRQHandler(void) {
+  if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+    {
+      char t = USART_ReceiveData(ESP8266);
+            if ((t == '\r') | (t=='\n')) {
+        //RETAILMSG(1, ("-"));
+      } else {
+        RETAILMSG(1, ("Recieved %c\n", t));
+      }//USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+
+  //
+}
+}
 /**
   * @}
   */ 

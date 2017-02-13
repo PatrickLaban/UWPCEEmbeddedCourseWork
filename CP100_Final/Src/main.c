@@ -44,13 +44,13 @@ void main() {
               __DATE__,
               __TIME__));
   
-
+    PrintStringESP("ATE0\r\n");
   
   while (1) {
     // loop forever
     asm("nop");                 // an example of inline assembler
     PrintStringESP("AT\r\n");
-    RETAILMSG(1, ("Recieved %c\n", (char)USART_ReceiveData(ESP8266)));
+    //RETAILMSG(1, ("Recieved %c\n", (char)USART_ReceiveData(ESP8266)));
     /*while (USART_GetFlagStatus(ESP8266, USART_FLAG_RXNE) == RESET)
   {
   }*/
