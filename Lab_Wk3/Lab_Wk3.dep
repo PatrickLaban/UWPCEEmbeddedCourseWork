@@ -6,281 +6,96 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Obj\print.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_rcc.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hw_init.o</file>
+      <file>$PROJ_DIR$\Debug\List\Lab_Wk3.map</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\common\stm32f4xx_gpio.h</file>
+      <file>$PROJ_DIR$\common\system_stm32f4xx.h</file>
+      <file>$PROJ_DIR$\inc\hw_init.h</file>
+      <file>$PROJ_DIR$\common\stm32f4xx_rcc.h</file>
+      <file>$PROJ_DIR$\inc\main.h</file>
+      <file>$PROJ_DIR$\inc\interrupt.h</file>
+      <file>$PROJ_DIR$\common\startup_stm32f401xx.s</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\inc\print.h</file>
+      <file>$PROJ_DIR$\common\stm32f4xx_gpio.c</file>
+      <file>$PROJ_DIR$\common\stm32f4xx_rcc.c</file>
+      <file>$PROJ_DIR$\inc\nucleoboard.h</file>
+      <file>$PROJ_DIR$\common\stm32f4xx_usart.h</file>
+      <file>$PROJ_DIR$\common\stm32f4xx_conf.h</file>
+      <file>$PROJ_DIR$\common\misc.h</file>
+      <file>$PROJ_DIR$\common\core_cmSimd.h</file>
+      <file>$PROJ_DIR$\common\stm32f4xx.h</file>
+      <file>$PROJ_DIR$\common\misc.c</file>
+      <file>$PROJ_DIR$\common\stm32f4xx_usart.c</file>
+      <file>$PROJ_DIR$\common\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\common\core_cm4.h</file>
+      <file>$PROJ_DIR$\common\core_cmFunc.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\interrupt.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_rcc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Lab_Wk3.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_usart.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
+      <file>$TOOLKIT_DIR$\config\linker\ST\stm32f401xE.icf</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_usart.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\lab1.o</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\Lab_Wk3.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\interrupt.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\hw_init.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_gpio.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\src\main.c</file>
+      <file>$PROJ_DIR$\src\interrupt.c</file>
       <file>$PROJ_DIR$\Debug\Obj\startup_stm32f401xx.o</file>
       <file>$PROJ_DIR$\Debug\Obj\print.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
       <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_gpio.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\common\core_cmFunc.h</file>
-      <file>$PROJ_DIR$\common\core_cmInstr.h</file>
-      <file>$PROJ_DIR$\common\core_cmSimd.h</file>
-      <file>$PROJ_DIR$\common\stm32f4xx.h</file>
-      <file>$PROJ_DIR$\common\stm32f4xx_conf.h</file>
-      <file>$PROJ_DIR$\common\core_cm4.h</file>
-      <file>$PROJ_DIR$\inc\print.h</file>
-      <file>$PROJ_DIR$\common\stm32f4xx_rcc.c</file>
-      <file>$PROJ_DIR$\inc\nucleoboard.h</file>
-      <file>$PROJ_DIR$\common\startup_stm32f401xx.s</file>
-      <file>$PROJ_DIR$\common\stm32f4xx_rcc.h</file>
-      <file>$PROJ_DIR$\common\system_stm32f4xx.h</file>
-      <file>$PROJ_DIR$\common\stm32f4xx_usart.c</file>
-      <file>$PROJ_DIR$\common\misc.h</file>
-      <file>$PROJ_DIR$\inc\hw_init.h</file>
-      <file>$PROJ_DIR$\common\misc.c</file>
-      <file>$PROJ_DIR$\common\stm32f4xx_gpio.c</file>
-      <file>$PROJ_DIR$\common\stm32f4xx_gpio.h</file>
-      <file>$PROJ_DIR$\common\stm32f4xx_usart.h</file>
-      <file>$PROJ_DIR$\inc\interrupt.h</file>
-      <file>$PROJ_DIR$\inc\main.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\print.o</file>
       <file>$PROJ_DIR$\src\hw_init.c</file>
-      <file>$PROJ_DIR$\Debug\Exe\Lab_Wk3.out</file>
-      <file>$PROJ_DIR$\Debug\Obj\Lab_Wk3.pbd</file>
-      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
-      <file>$PROJ_DIR$\src\main.c</file>
-      <file>$PROJ_DIR$\src\print.c</file>
       <file>$PROJ_DIR$\src\lab1.s</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\src\interrupt.c</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\interrupt.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\hw_init.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_usart.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_gpio.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\lab1.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\config\linker\ST\stm32f401xE.icf</file>
-      <file>$PROJ_DIR$\Debug\Obj\interrupt.o</file>
-      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_rcc.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_usart.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\hw_init.o</file>
-      <file>$PROJ_DIR$\Debug\List\Lab_Wk3.map</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_rcc.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\src\print.c</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 31 61</file>
+          <file> 49 4</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\common\stm32f4xx_rcc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 54</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 63</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5 7 10 12 50 64 18 11 57 47 62 17 8 9 46 43 3 56 24 20</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 17 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 24 20</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\common\startup_stm32f401xx.s</name>
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 1</file>
+          <file> 57</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\common\stm32f4xx_usart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 42</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10 5 8 12 64 43 3 62 20 17 18 9 46 56 24 25 11 7 50 57 47</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 25 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 24 17 20</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\common\misc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 29</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 28</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 9 5 47 62 10 12 8 57 50 17 18 11 7 64 20 46 43 3 56 24</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 20 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 24 17</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\common\stm32f4xx_gpio.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 4</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 48</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 62 5 10 47 12 11 57 50 17 18 7 64 24 8 9 46 43 3 56 20</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 24 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 17 20</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\src\hw_init.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 41</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
           <file> 60</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 9 46 64 25 18 24 20 10 56 17 26 12 5 8 43 3 62 15 11 7 50 57 47 27</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 15 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 24 17 20 26 27 25</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\Lab_Wk3.out</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 61</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 51 60 52 49 37 28 0 1 48 63 42 58 59 53 45</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\src\main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 6</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 37</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10 8 21 25 18 64 43 3 62 20 39 15 13 26 24 12 5 9 46 56 27 11 7 50 57 47 17 44 33</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 27 15 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 24 17 20 26 25 21 13 44 39 33</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\src\print.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 0</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 7 24 5 27 44 26 12 50 64 39 15 10 25 18 11 57 47 62 17 13 8 9 46 43 3 56 20 33</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 13 15 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 24 17 20 26 27 25 44 39 33</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\src\lab1.s</name>
-      <outputs>
-        <tool>
-          <name>AARM</name>
-          <file> 49</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\src\interrupt.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 40</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -290,11 +105,196 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 26 8 12 46 64 24 5 9 56 10 25 18 11 7 43 3 62 20 15 50 57 47 17 27</file>
+          <file> 0 53 23 48 27 20 5 31 10 8 28 2 7 26 22 35 37 59 43 21</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 15 10 12 5 64 50 46 3 56 43 57 8 62 47 7 9 18 11 24 17 20 26 27 25</file>
+          <file> 7 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 10 21</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\common\stm32f4xx_rcc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 53 28 23 27 31 2 8 20 5 48 0 10 26 22 35 37 59 43 7 21</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 10 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 7 21</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\common\misc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 53 48 0 23 27 26 5 31 10 8 20 28 2 21 35 37 59 43 7</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 7 10</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\common\stm32f4xx_usart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23 53 26 27 2 37 59 0 21 10 8 22 35 43 7 19 20 28 31 5 48</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 7 10 21</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\Lab_Wk3.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 41 3 30 44 46 40 61 57 52 1 36 14 6 38 45</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\src\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 46</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23 26 9 19 8 2 37 59 0 21 29 18 15 12 7 27 53 22 35 43 11 20 28 31 5 48 10 47 54</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 11 18 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 7 10 21 12 19 9 15 47 29 54</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\src\interrupt.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 50</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 30</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12 26 27 35 2 7 53 22 43 23 19 8 20 28 37 59 0 21 18 31 5 48 10 11</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 18 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 7 10 21 12 11 19</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\src\hw_init.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 35 2 19 8 7 21 23 43 10 12 27 53 26 37 59 0 18 20 28 31 5 48 11</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 18 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 7 10 21 12 11 19</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\src\lab1.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 44</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\src\print.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 7 53 11 47 12 27 31 2 29 18 23 19 8 20 5 48 0 10 15 26 22 35 37 59 43 21 54</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15 18 23 27 53 2 31 35 59 43 37 5 26 0 48 28 22 8 20 7 10 21 12 11 19 47 29 54</file>
         </tool>
       </inputs>
     </file>
