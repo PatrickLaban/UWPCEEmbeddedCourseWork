@@ -2659,6 +2659,12 @@
       <name>$PROJ_DIR$\MP3data\GenerateMp3Header.ps1</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\MP3data\rwby.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MP3data\RWBY.mp3</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\MP3data\train_crossing.h</name>
     </file>
     <file>
