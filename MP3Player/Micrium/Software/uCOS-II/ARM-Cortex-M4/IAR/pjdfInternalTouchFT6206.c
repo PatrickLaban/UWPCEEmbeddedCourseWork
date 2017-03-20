@@ -15,19 +15,18 @@
 #include "bspI2c.h"
 
 
-/*
-// SPI link, etc for VS1053 MP3 decoder hardware
-typedef struct _PjdfContextMp3VS1053
-{
-    HANDLE spiHandle; // SPI communication link to VS1053
-    INT8U chipSelect; // 0 means command, 1 means data
-} PjdfContextMp3VS1053;
 
-static PjdfContextMp3VS1053 mp3VS1053Context = { 0 };
+// 
+typedef struct _PjdfContextTouchFT6206
+{
+    int8_t regSelect; // Which register address to read from
+} PjdfContextFT6206;
+
+static PjdfContextFT6206 ft6206Context = { 0 };
 
 static const INT16U Mp3SpiDataRate = MP3_SPI_DATARATE;
 static const INT32U SizeofMp3SpiDataRate = sizeof(Mp3SpiDataRate);
-*/
+
 
 // OpenTouch
 // Nothing to do.
@@ -54,42 +53,15 @@ static PjdfErrCode CloseTouch(DriverInternal *pDriver)
 static PjdfErrCode ReadTouch(DriverInternal *pDriver, void* pBuffer, INT32U* pCount)
 {
     PjdfErrCode retval;
-    uint8_t reg;
+    int8_t reg;
     uint32_t bufferSize = *pCount;
-    //uint8_t* bufferArray = (uint8_t*)pBuffer;
+    PjdfContextFT6206 *pContext = (PjdfContextFT6206*) pDriver->deviceContext;
     
-    //PjdfContextMp3VS1053 *pContext = (PjdfContextMp3VS1053*) pDriver->deviceContext;
-    //HANDLE hSPI = pContext->spiHandle;
-    
-    // Currently no need for exclusive lock
-    //retval = Ioctl(hSPI, PJDF_CTRL_SPI_WAIT_FOR_LOCK, 0, 0);   // wait for exclusive access
-    //if (retval != PJDF_ERR_NONE) while(1);
-    
-    /*
-    switch (pContext->chipSelect) {
-    case 0: // send command 
-        MP3_VS1053_MCS_ASSERT(); // assert command chip-select
-        retval = Read(hSPI, pBuffer, pCount);
-        MP3_VS1053_MCS_DEASSERT(); // de-assert command chip-select
-        break;
-    default:
-        while(1); // must be in command mode
-    }
-    retval = Ioctl(hSPI, PJDF_CTRL_SPI_RELEASE_LOCK, 0, 0);
-    if (retval != PJDF_ERR_NONE) while(1);
-    */
-    
-    if (bufferSize == 1) {
-      // Assume this is the touched call, need to figure out a better work around.
-      // This is similiar to the readregister8
-      reg = FT6206_REG_NUMTOUCHES;
-    } else {
-      reg = 0;
-    }
+    reg = (uint8_t)pContext->regSelect;
       
     // use i2c
     I2C_start(I2C1, FT6206_ADDR<<1, I2C_Direction_Transmitter); 
-    I2C_write(I2C1, (uint8_t)reg);
+    I2C_write(I2C1, reg);
     I2C_stop(I2C1);
     I2C_start(I2C1, FT6206_ADDR<<1, I2C_Direction_Receiver);
     // Wire.requestFrom((uint8_t)FT6206_ADDR, (uint8_t)1);
@@ -133,9 +105,18 @@ static PjdfErrCode WriteTouch(DriverInternal *pDriver, void* pBuffer, INT32U* pC
 // Returns: PJDF_ERR_NONE if there was no error, otherwise an error code.
 static PjdfErrCode IoctlTouch(DriverInternal *pDriver, INT8U request, void* pArgs, INT32U* pSize)
 {
-    // For now keep this simple and focus on the read code. 
-    PjdfErrCode retval;
-    retval = PJDF_ERR_NONE;
+    HANDLE handle;
+    PjdfErrCode retval = PJDF_ERR_NONE;
+    PjdfContextFT6206 *pContext = (PjdfContextFT6206*) pDriver->deviceContext;
+    switch (request)
+    {
+    case PJDF_CTRL_TOUCH_REG:
+        pContext->regSelect = FT6206_REG_MODE;
+        break;
+    case PJDF_CTRL_NUM_TOUCHES_REG:
+        pContext->regSelect = FT6206_REG_NUMTOUCHES;
+        break;
+    }
     return retval;
 }
 
@@ -150,7 +131,7 @@ PjdfErrCode InitTouchFT6206(DriverInternal *pDriver, char *pName)
     if (pDriver->sem == NULL) while (1);  // not enough semaphores available
     pDriver->refCount = 0; // number of Open handles to the device
     pDriver->maxRefCount = 1; // only one open handle allowed
-    //pDriver->deviceContext = &mp3VS1053Context;
+    pDriver->deviceContext = &ft6206Context;
     
     BspMp3InitVS1053(); // Initialize related GPIO
   

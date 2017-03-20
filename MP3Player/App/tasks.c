@@ -50,16 +50,16 @@ The maximum number of tasks the application can have is defined by OS_MAX_TASKS 
 
 ************************************************************************************/
 
-static OS_STK   LcdTouchDemoTaskStk[APP_CFG_TASK_START_STK_SIZE];
-static OS_STK   Mp3DemoTaskStk[APP_CFG_TASK_START_STK_SIZE];
+static OS_STK   MainHandlerTaskStk[APP_CFG_TASK_START_STK_SIZE];
+static OS_STK   MP3ManagmentTaskStk[APP_CFG_TASK_START_STK_SIZE];
 
 HANDLE hSPI = 0;
 HANDLE hMp3 = 0;
 
 
 // Task prototypes
-void LcdTouchDemoTask(void* pdata);
-void Mp3DemoTask(void* pdata);
+void MainHandlerTask(void* pdata);
+void MP3ManagmentTask(void* pdata);
 
 #define CURRENTACTIONQUEUEMAXENTRIES 2 // [play status, song title] possibly % mp3 played
 OS_EVENT * currentActionQueue; // Use a queue for our status
@@ -147,8 +147,8 @@ void StartupTask(void* pdata)
     
     
     // The maximum number of tasks the application can have is defined by OS_MAX_TASKS in os_cfg.h
-    //OSTaskCreate(Mp3DemoTask, (void*)0, &Mp3DemoTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST1_PRIO);
-    OSTaskCreate(LcdTouchDemoTask, (void*)0, &LcdTouchDemoTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST2_PRIO);
+    //OSTaskCreate(MP3ManagmentTask, (void*)0, &MP3ManagmentTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST1_PRIO);
+    OSTaskCreate(MainHandlerTask, (void*)0, &MainHandlerTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST2_PRIO);
     
     // Delete ourselves, letting the work be done in the new tasks.
     PrintWithBuf(buf, BUFSIZE, "StartupTask: deleting self\n");
@@ -312,7 +312,7 @@ static void DrawLcdContents()
 Runs LCD/Touch demo code
 
 ************************************************************************************/
-void LcdTouchDemoTask(void* pdata)
+void MainHandlerTask(void* pdata)
 {
     PjdfErrCode pjdfErr;
     INT32U length;
@@ -325,7 +325,7 @@ void LcdTouchDemoTask(void* pdata)
 
     
     char buf[BUFSIZE];
-    PrintWithBuf(buf, BUFSIZE, "LcdTouchDemoTask: starting\n");
+    PrintWithBuf(buf, BUFSIZE, "MainHandlerTask: starting\n");
     
     PrintWithBuf(buf, BUFSIZE, "Opening LCD driver: %s\n", PJDF_DEVICE_ID_LCD_ILI9341);
     // Open handle to the LCD driver
@@ -409,7 +409,7 @@ void LcdTouchDemoTask(void* pdata)
                 currentAction = 1;
                 pauseButtonActive = true;
                 songTitle = songList[currentSong];
-                OSTaskCreate(Mp3DemoTask, (void*)0, &Mp3DemoTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST1_PRIO);
+                OSTaskCreate(MP3ManagmentTask, (void*)0, &MP3ManagmentTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST1_PRIO);
                 break;
             default:
                 pauseButtonActive = false;
@@ -451,7 +451,7 @@ void LcdTouchDemoTask(void* pdata)
             err = OSQPost(currentActionQueue, &currentAction);
             err = OSQPost(currentActionQueue, songTitle);
             OSTaskDel(APP_TASK_TEST1_PRIO);
-            OSTaskCreate(Mp3DemoTask, (void*)0, &Mp3DemoTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST1_PRIO);
+            OSTaskCreate(MP3ManagmentTask, (void*)0, &MP3ManagmentTaskStk[APP_CFG_TASK_START_STK_SIZE-1], APP_TASK_TEST1_PRIO);
             DrawLcdContents();
         }
     }
@@ -461,10 +461,10 @@ void LcdTouchDemoTask(void* pdata)
 Runs MP3 demo code
 
 ************************************************************************************/
-void Mp3DemoTask(void* pdata)
+void MP3ManagmentTask(void* pdata)
 {
     char buf[BUFSIZE];
-    PrintWithBuf(buf, BUFSIZE, "Mp3DemoTask: starting\n");
+    PrintWithBuf(buf, BUFSIZE, "MP3ManagmentTask: starting\n");
     int count = 0;
     
     while (1)

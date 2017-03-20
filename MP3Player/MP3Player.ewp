@@ -2227,6 +2227,9 @@
     </file>
   </group>
   <group>
+    <name>doc</name>
+  </group>
+  <group>
     <name>Micrium</name>
     <group>
       <name>Software</name>
